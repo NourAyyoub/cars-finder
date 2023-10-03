@@ -1,0 +1,15 @@
+{% extends "base.htm" %}
+{% block title %} {{title_of_page}} {% endblock %}
+{% block body%}
+<div class="container mt-5 d-flex justify-content-center align-items-center h-100"> 
+    <div>
+        <h1 class="text-center">Vehicle Plate Form</h1>
+        <form>
+            <div class="mb-3">
+                <input type="text" class="form-control small-input" id="vehiclePlate" placeholder="Enter Vehicle Plate">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

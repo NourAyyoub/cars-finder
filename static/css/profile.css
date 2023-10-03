@@ -1,0 +1,30 @@
+
+body {
+    text-align: center;
+    display: flex;
+    justify-content: center ;
+    align-items: center ;
+    min-height: 100vh ;
+    width: 100% ;
+}
+.word
+{
+    color:rgb(15, 15, 116);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+.form-box
+{
+    width: 400px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    position: relative;
+}
+
+p {
+    border: 2px solid;
+    border-color: dimgrey;
+    padding: 5px;
+}
