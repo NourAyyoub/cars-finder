@@ -8,5 +8,6 @@ def hom():
 @app.route("/profile")
 def profile():
     return render_template("profile.htm",title_of_page="Profile", css_file="profile")
+
 if __name__ == "__main__":
     app.run(debug=True, host= "0.0.0.0" , port = 3000)
