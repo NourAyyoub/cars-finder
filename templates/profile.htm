@@ -1,18 +1,16 @@
 {% extends "base.htm" %}
-{% block title %} {{title_of_page}} {% endblock %}
-{% block body%}
+{% block title %} {{ title_of_page }} {% endblock %}
+{% block body %}
 <div class="form-box">
-
     <div class="card w-15">
-         <img src="static/imag/1.png" class="card-img-top img-fluid" alt="Profile Image">
-            <h5 class="card-title">Nour Ayyoub</h5>
-            <p class="card-text"><span class="word">Registration number:</span> 12027771</p>
-            <p class="card-text"><span class="word">College:</span> IT</p>
-            <p class="card-text"><span class="word">Department:</span> CS</p>
-            <p class="card-text"><span class="word">Gender:</span> Male</p>
-            <p class="card-text"><span class="word">Email:</span> nour.ayyob@gmail.com</p>
-            <p class="card-text"><span class="word">Phone:</span> 0595192051</p>
+        <h5 class="card-title">the car owner</h5>
+        {% if User %}
+            {% for key, value in User.items() %}
+                <p class="card-text"><span class="word">{{ key }}:</span> {{ value }}</p>
+            {% endfor %}
+        {% else %}
+            <p>No user found</p>
+        {% endif %}
     </div>
-
 </div>
 {% endblock %}
