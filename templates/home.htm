@@ -8,7 +8,7 @@
         <form method="POST">
             {{ form.hidden_tag() }}
             <div class="mb-3">
-                {{ form.VehiclePlate.label }}
+                {{ form.VehiclePlate.label(class="form-label") }}
                 {{ form.VehiclePlate(class="form-control small-input", id="vehiclePlate", placeholder="Enter Vehicle Plate") }}
             </div>
             <button type="submit" class="btn btn-primary">Search Owner</button>
@@ -16,3 +16,4 @@
     </div>
 </div>
 {% endblock %}
+
