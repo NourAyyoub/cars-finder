@@ -1,20 +1,31 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .small-input {
-    width: 200px; 
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background-color: #f8f9fa;
 }
-.btn-custom {
-    background-color: #1d8bcb;
-    color: white; 
-    border: none;
-    padding: 10px 20px; 
 
+.btn-custom {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
-.not-found
-{
-    color: red;
-    border-color: red;
-    padding: 10px 20px;
-    margin:10px 20px;
-    border-radius: 7px;
-    border: 2px solid;
+
+.btn-custom:hover {
+    background-color: #0056b3;
 }

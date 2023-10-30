@@ -11,10 +11,7 @@
                 {{ form.VehiclePlate.label }}
                 {{ form.VehiclePlate(class="form-control small-input", id="vehiclePlate", placeholder="Enter Vehicle Plate") }}
             </div>
-            <button type="submit" class="btn btn-custom">Search Owner</button>
-            {% if message %}
-                <p class="not-found">{{ message }}</p>
-            {% endif %}
+            <button type="submit" class="btn btn-primary">Search Owner</button>
         </form>
     </div>
 </div>

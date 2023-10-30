@@ -1,16 +1,25 @@
 {% extends "base.htm" %}
 {% block title %} {{ title_of_page }}'s profile{% endblock %}
 {% block body %}
-<div class="form-box">
-    <div class="card w-15">
-        <h5 class="card-title">the car owner</h5>
-        {% if User %}
-            {% for key, value in User.items() %}
-                <p class="card-text"><span class="word">{{ key }}:</span> {{ value }}</p>
-            {% endfor %}
-        {% else %}
-            <p>No user found</p>
-        {% endif %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">The car owner</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span class="word">Name:</span> {{ User.Name }}</li>
+                        <li class="list-group-item"><span class="word">Vehicle Plate:</span> {{ User.Vehicle_Plate }}</li>
+                        <li class="list-group-item"><span class="word">Registration Number:</span> {{ User.Registration_number }}</li>
+                        <li class="list-group-item"><span class="word">College:</span> {{ User.College }}</li>
+                        <li class="list-group-item"><span class="word">Department:</span> {{ User.Department }}</li>
+                        <li class="list-group-item"><span class="word">Gender:</span> {{ User.Gender }}</li>
+                        <li class="list-group-item"><span class="word">Email:</span> {{ User.Email }}</li>
+                        <li class="list-group-item"><span class="word">Phone:</span> {{ User.Phone }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
