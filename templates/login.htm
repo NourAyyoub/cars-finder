@@ -1,6 +1,14 @@
 {% extends "base.htm" %}
 {% block title %} {{ title_of_page }} {% endblock %}
 {% block body %}
+<div>
+    <ul class="nav " style="font-size: large;">
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('home')}}">Home</a>
+        </li>
+    </ul>
+</div>
+
 <div class="container">
     <div class="row justify-content-center align-items-center" style="height: 100vh;">
         <div class="col-md-6">

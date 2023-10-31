@@ -1,6 +1,20 @@
 {% extends "base.htm" %}
 {% block title %} {{ title_of_page }} {% endblock %}
 {% block body %}
+<div>
+    <ul class="nav " style="font-size: large;">
+        {% if 'user' in session %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('logout')}}">Log Out</a>
+            </li>
+        {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('login')}}">Login</a>
+            </li>
+        {% endif %}
+    </ul>
+</div>
+
 <div class="container mt-5 d-flex justify-content-center align-items-center h-100">
     <div>
         <h1 class="text-center">Vehicle Plate Form</h1>

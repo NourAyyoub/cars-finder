@@ -1,0 +1,27 @@
+{% extends "base.htm" %}
+{% block title %} {{ title_of_page }} {% endblock %}
+{% block body %}
+<div>
+    <ul class="nav " style="font-size: large;">
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('home')}}">Home</a>
+        </li>
+        {% if 'user' in session %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('logout')}}">Log Out</a>
+            </li>
+        {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('login')}}">Login</a>
+            </li>
+        {% endif %}
+    </ul>
+</div>
+
+{% if 'user' in session %}
+<h1>Hi Admain</h1>
+<h5>You are now using the site as an administrator</h5>
+{% else %}
+<h1>Sorry, your session has expired. You must login</h1>
+{% endif%}
+{% endblock %}

@@ -69,9 +69,18 @@ def login():
             return render_template("login.htm", title_of_page="Login", css_file="login", form=form, message="Wrong Credentials. Please Try Again.")
         else:
             session['user'] = user.id
-            print("Login success")
-            return render_template("login.htm", title_of_page="Login", css_file="login", message="Successfully Logged In!",form=form)
+            return redirect(url_for('admin'))
     return render_template("login.htm", title_of_page="Login", css_file="login", form=form)
+
+@app.route("/admin")
+def admin():
+    return render_template("admin.htm", title_of_page="Admin")
+
+@app.route("/logout")
+def logout():
+    if 'user' in session:
+        session.pop('user')
+    return redirect(url_for('home'))
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=3000)
